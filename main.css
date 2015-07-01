@@ -1,6 +1,6 @@
 @font-face{
 	font-family: 'LiquidCrystal-Normal';
-    src: url(liquid_crystal/LiquidCrystal-Bold.otf);
+    src: url(LiquidCrystal-Normal.otf);
 }
 
 
@@ -30,7 +30,7 @@
 	height: 55%;
 	width: 80%;
 	margin : auto;
-	background-color : rgba(0, 255, 0, 0.2);
+	background-color : rgba(0, 255, 0, 0.25	);
 	border-radius : 3px;
 	padding : 10px;
 	box-sizing : border-box;
@@ -38,9 +38,22 @@
 
 .label{
 	color: white;
-	text-align: center;
-	padding: 30px;
 	letter-spacing: 1px;
+	padding-top: 5px;
+	width: 80%;
+	margin: auto;
+	text-align: justify;
+}
+
+
+.brand {
+	text-align: center;
+	padding: 20px;
+}
+
+.radio {
+	font-size: 11px;
+	word-spacing: 34px;
 }
 
 .time{
@@ -64,7 +77,7 @@
 .clock-text {
 	float:left;
 	color : lime;
-	line-height: 50px;
+	line-height: 40px;
 	letter-spacing: 5px;
 
 }
