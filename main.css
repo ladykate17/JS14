@@ -1,0 +1,74 @@
+@font-face{
+	font-family: 'LiquidCrystal-Normal';
+    src: url(liquid_crystal/LiquidCrystal-Bold.otf);
+}
+
+
+.container{
+	margin: auto;
+	width: 80%;
+	box-sizing: border-box;
+}
+
+.outer-shell{
+	width : 600px;
+	height : 280px;
+	background-color : #333;
+	border-radius : 180px 180px 10px 10px;
+	padding : 25px;
+	box-sizing : border-box;
+}
+
+.inner-shell{
+	height: 95%;
+	background-color : #000;
+	border-radius : 160px 160px 3px 3px;
+	box-sizing : border-box;
+}
+
+.screen{
+	height: 55%;
+	width: 80%;
+	margin : auto;
+	background-color : rgba(0, 255, 0, 0.2);
+	border-radius : 3px;
+	padding : 10px;
+	box-sizing : border-box;
+}
+
+.label{
+	color: white;
+	text-align: center;
+	padding: 30px;
+	letter-spacing: 1px;
+}
+
+.time{
+	font-family: 'LiquidCrystal-Normal', sans-serif;
+	color : lime;
+	text-align : center;
+	font-size : 120px;
+	text-align : left;
+	line-height: 120px;
+	margin: 35px 10px 35px 25px;
+}
+
+.am-pm{
+	font-family: 'LiquidCrystal-Normal', sans-serif;
+	font-size : 50px;
+	display : block;
+	margin-top: 3px;
+	opacity: 0.1;
+}
+
+.clock-text {
+	float:left;
+	color : lime;
+	line-height: 50px;
+	letter-spacing: 5px;
+
+}
+
+.active{
+	opacity: 1;
+}
