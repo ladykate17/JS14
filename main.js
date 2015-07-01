@@ -1,6 +1,33 @@
 $(document).on('ready', function() {
 
-	// outerShell.append(innerShell).append(text)
+	
+	//--- Clock workings ---//
+
+	var myClock = setInterval(function(){ timer() }, 1000);
+
+	function timer() {
+	    var date = new Date();
+	    var time = date.toLocaleTimeString().slice(0, 5);
+	    
+	    document.getElementById("clock").innerHTML = time;
+
+	    if (time.charAt(4) === ':') {
+	    	time = '0' + (date.toLocaleTimeString().slice(0, 4));
+	    	document.getElementById("clock").innerHTML = time;
+	    }
+
+	    if (time.charAt((time.length)-2) === 'A'){
+	    	$(am).addClass('active');
+	    }
+	    else {
+	    	$(pm).addClass('active')
+	    	$(am).removeClass('active');
+	    }
+	}
+	
+	//--- Clock Arch. ---//
+
+	// Container
 	var container = $('<div class="container"></div>');
 
 	// Outer Shell 
@@ -22,30 +49,10 @@ $(document).on('ready', function() {
 	// Radio Label 
 	var radiolabel = $('<div class="radio label">FM 88 92 96 100 104 108 MHz</div><div class="radio label">AM 54 60 80 100 130 160 x10kHz</div>');
 
-	
-	// //--- Clock workings ---//
-
-	var currentTime = new Date()
-	var hours = currentTime.getHours()
-	var minutes = currentTime.getMinutes()
-
-	if (minutes < 10)
-	minutes = "0" + minutes
-
-	var suffix = $(am).addClass('active');
-	
-	if (hours >= 12) {
-	suffix = $(pm).addClass('active'), $(am).removeClass('active');
-	hours = hours - 12;
-	}
-	if (hours == 0) {
-	hours = 12;
-	}
-
-
 	// clock face text
-	var text = $('<div class="clock-text time">' + hours + ":" + minutes + '</div>');
+	var text = $('<div class="clock-text time" id="clock"></div>');
 
+	// console.log(currentTime.toLocaleTimeString());
 
 	$('body').prepend(container)
 	$('.container').append(outerShell);
