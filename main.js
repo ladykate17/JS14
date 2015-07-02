@@ -8,6 +8,9 @@ $(document).on('ready', function() {
 	function timer() {
 	    var date = new Date();
 	    var time = date.toLocaleTimeString().slice(0, 5);
+	    var t2 = date.toLocaleTimeString();
+
+		// console.log(t2.charAt((t2.length-2)));
 	    
 	    document.getElementById("clock").innerHTML = time;
 
@@ -16,12 +19,12 @@ $(document).on('ready', function() {
 	    	document.getElementById("clock").innerHTML = time;
 	    }
 
-	    if (time.charAt((time.length)-2) === 'A'){
+	    if ((t2.charAt((t2.length-2))) === 'A'){
 	    	$(am).addClass('active');
 	    }
 	    else {
-	    	$(pm).addClass('active')
 	    	$(am).removeClass('active');
+	    	$(pm).addClass('active')
 	    }
 	}
 	
